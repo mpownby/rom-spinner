@@ -1,0 +1,141 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC5AEC78-9285-41E0-A695-8A0712D92482}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ROMSpinnerTest</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ROMSpinner.Test</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\NUnit 2.4.7\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Segments.cs" />
+    <Compile Include="Test65816.cs" />
+    <Compile Include="TestAuth.cs" />
+    <Compile Include="TestCommon.cs" />
+    <Compile Include="TestCrypt.cs" />
+    <Compile Include="TestDB.cs" />
+    <Compile Include="TestLair.cs" />
+    <Compile Include="TestNetwork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ROMSpinnerApple2\ROMSpinnerApple2.csproj">
+      <Project>{D35D97F4-0C56-4EAA-B061-3D63708B579F}</Project>
+      <Name>ROMSpinnerApple2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROMSpinnerBusiness\ROMSpinnerBusiness.csproj">
+      <Project>{9518ACEA-BD83-438E-AA65-95AB5D7CC275}</Project>
+      <Name>ROMSpinnerBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROMSpinnerCommon\ROMSpinnerCommon.csproj">
+      <Project>{DA8B7079-254C-4493-B7BB-16F5AF9F1DD9}</Project>
+      <Name>ROMSpinnerCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROMSpinnerDB\ROMSpinnerDB.csproj">
+      <Project>{2B5AD3AF-C330-4361-9F6C-BC1450ECCC0E}</Project>
+      <Name>ROMSpinnerDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROMSpinnerLair\ROMSpinnerLair.csproj">
+      <Project>{A02F5FAE-FC65-4D1B-B025-1FC4E57077B9}</Project>
+      <Name>ROMSpinnerLair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROMSpinnerWeb\ROMSpinnerWeb.csproj">
+      <Project>{46C8D15B-5539-45D0-8236-7B1DB33E60D4}</Project>
+      <Name>ROMSpinnerWeb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy $(SolutionDir)ROMSpinnerResources\lair.zip $(TargetDir)
+copy $(SolutionDir)ROMSpinnerResources\asdf.txt.pk4 $(TargetDir)
+copy $(SolutionDir)ROMSpinnerResources\*.dll $(TargetDir)
+copy $(SolutionDir)ROMSpinnerResources\*.bmp $(TargetDir)
+rem copy $(SolutionDir)ROMSpinnerResources\*.pdb $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+</Project>
